@@ -1,41 +1,46 @@
-import { SocialNetworkQueries } from "../src/SocialNetworkQueries";
+import { SocialNetworkQueries } from '../src/SocialNetworkQueries';
 
 describe('SocialNetworkQueries', () => {
-  describe("example from README", () => {
-
-    it("should find potential likes", async () => {
+  describe('example from README', () => {
+    it('should find potential likes', async () => {
       // given
       const user = {
-        id: "mrouk3",
+        id: 'mrouk3',
         likes: {
-          books: ["Moby Dick", "Ulysses"],
+          books: ['Moby Dick', 'Ulysses'],
         },
-        friends: [{
-          id: "YazL",
-          likes: {
-            books: ["Ulysses", "War and Peace"],
+        friends: [
+          {
+            id: 'YazL',
+            likes: {
+              books: ['Ulysses', 'War and Peace'],
+            },
           },
-        }, {
-          id: "queen9",
-          likes: {
-            books: ["The Great Gatsby", "Ulysses"],
+          {
+            id: 'queen9',
+            likes: {
+              books: ['The Great Gatsby', 'Ulysses'],
+            },
           },
-        }, {
-          id: "joyJoy",
-          likes: {
-            books: ["Don Quixote", "The Great Gatsby"],
+          {
+            id: 'joyJoy',
+            likes: {
+              books: ['Don Quixote', 'The Great Gatsby'],
+            },
           },
-        }, {
-          id: "0sin5k1",
-          likes: {
-            books: ["The Great Gatsby", "War and Peace"],
+          {
+            id: '0sin5k1',
+            likes: {
+              books: ['The Great Gatsby', 'War and Peace'],
+            },
           },
-        }, {
-          id: "mariP",
-          likes: {
-            books: ["Don Quixote", "Hamlet", "Ulysses"],
+          {
+            id: 'mariP',
+            likes: {
+              books: ['Don Quixote', 'Hamlet', 'Ulysses'],
+            },
           },
-        }],
+        ],
       };
 
       // when
@@ -45,13 +50,8 @@ describe('SocialNetworkQueries', () => {
 
       // then
       expect(potentialLikes).toEqual({
-        books: [
-          "The Great Gatsby",
-          "Don Quixote",
-          "War and Peace",
-        ],
+        books: ['The Great Gatsby', 'Don Quixote', 'War and Peace'],
       });
     });
-
   });
 });
